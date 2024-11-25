@@ -5,8 +5,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "Testing Stuff",
-  description: "Testing Stuff",
+  title: "Tweetzy",
+  description: "Tweetzy - A Twitter Clone",
 };
 
 export default function RootLayout({
@@ -17,11 +17,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="min-h-screen flex flex-col gap-4 md:max-w-screen-xl mx-auto">
+        <body className="md:max-w-screen-xl mx-auto px-4">
           <Navbar />
-          <div className="flex flex-1 justify-center items-center">
-            {children}
-          </div>
+          <div className="">{children}</div>
         </body>
       </html>
     </ClerkProvider>
